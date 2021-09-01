@@ -1,0 +1,667 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5rem 0;
+}
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+body {
+  line-height: 1.5rem;
+  font-family: "Inter", san-serif;
+  font-size: 1.5rem;
+}
+.text-light {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+.py-5 {
+  padding: 5rem 0;
+}
+/*preload*/
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #77b3d4;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 5s ease;
+}
+
+.cloud1,
+.cloud2,
+.cloud3 {
+  height: 80px;
+  position: absolute;
+  right: 0;
+  z-index: 995;
+}
+.cloud1 {
+  top: 25%;
+  transform: translate(100%, -25%);
+  animation: cloud 3s ease infinite;
+}
+.cloud2 {
+  top: 75%;
+  transform: translate(100%, -50%);
+  animation: cloud 3s ease infinite 2s;
+}
+.cloud3 {
+  transform: translate(100%, -75%);
+  animation: cloud 3s ease infinite 1.5s;
+}
+.airplane {
+  width: 300px;
+
+  animation: airplane 1s ease infinite alternate;
+}
+.preloader h3 {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+}
+@keyframes airplane {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+@keyframes cloud {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 200%;
+  }
+}
+.preload-finnish {
+  opacity: 0;
+  pointer-events: none;
+}
+/*header*/
+
+.header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2)),
+    url(./images/pexels-photo-6476260.jpeg) center/cover no-repeat;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: #ffff;
+  z-index: 990;
+  width: 100%;
+  box-shadow: 0 0 4px lightgray;
+}
+.navbar-brand {
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 700;
+  color: rgb(20, 20, 19);
+}
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+  font-size: 2rem;
+  color: black;
+}
+.navbar-toggler:hover {
+  color: yellow;
+}
+
+.brand-and-toggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.nav-item {
+  padding: 0.5rem;
+  text-align: center;
+}
+.nav-link {
+  text-transform: capitalize;
+  color: black;
+}
+.nav-link:hover {
+  color: yellow;
+}
+.navbar-collapse {
+  height: 0;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+.showNav {
+  height: 200px;
+}
+.header-banner {
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header-banner-content {
+  background-color: rgb(245, 245, 245, 0.85);
+  padding: 1rem;
+}
+.header-banner-content:hover {
+  background-color: white;
+}
+.banner-line {
+  width: 110px;
+  height: 2px;
+  background: black;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.banner-title span {
+  display: block;
+  text-align: center;
+}
+.banner-title span:first-of-type {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: "Epilogue", san-serif;
+}
+.banner-title span:last-of-type {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.header-btn {
+  padding: 0.5rem 1.5rem;
+  margin: 3rem auto;
+
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid black;
+}
+.header-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+}
+.title-text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  display: block;
+  padding: 2rem;
+}
+
+.about {
+  padding: 2rem;
+}
+.about-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.about-item {
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid yellow;
+}
+
+.about-icon {
+  margin: 0 auto 1.6rem;
+  color: white;
+  background-color: yellow;
+
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.about-icon:hover {
+  background-color: black;
+  transform: translateY(-10px);
+}
+.about-btn {
+  color: white;
+  background-color: black;
+  padding: 0.5rem 1.5rem;
+  border: none;
+}
+.about-btn:hover {
+  opacity: 0.7;
+}
+
+.about-sec-underline {
+  background-color: grey;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+.about-wrapper1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+.about-wrapper > div {
+  margin: 3rem 0;
+}
+.about-wrapper2 {
+  padding: 1rem;
+}
+.progress-group {
+  padding: 2rem 0;
+}
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+}
+.progress {
+  position: relative;
+  height: 10px;
+  background: grey;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: yellow;
+  border-radius: 10px;
+}
+.w-80 {
+  width: 80%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-90 {
+  width: 90%;
+}
+/*portfolio*/
+.portfolio {
+  background-color: lightgrey;
+  padding: 3rem;
+}
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btns-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-items: center;
+  margin: 3rem;
+}
+
+.btn-item {
+  padding: 0.5rem 1.2rem;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-active {
+  background-color: yellow;
+  color: white;
+}
+.imgs-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.img-item {
+  margin: 0.5rem;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.6s ease, 0.6s ease transform;
+}
+/*pricing*/
+/*hide checkbox*/
+.toggle-switch {
+  left: -9999px;
+  position: absolute;
+}
+/*swtich table*/
+.switch-table {
+  width: 100%;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.switch-table div,
+.custom-switch {
+  display: inline-block;
+}
+.custom-switch {
+  height: 2.5rem;
+  width: 6rem;
+  background-color: blue;
+  border-radius: 30px;
+  vertical-align: middle;
+  margin: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.custom-switch span {
+  height: 2.1rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: white;
+
+  top: 2px;
+  left: 5px;
+  position: absolute;
+  transition: left 0.5s ease;
+}
+
+.pricing .pricing-main.active .switch-table .custom-switch span {
+  left: 3.6rem;
+}
+
+.pricing {
+  background-color: whitesmoke;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.pricing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pricing-table {
+  width: calc((100% / 3)-10px);
+  margin: 2rem auto;
+  border-radius: 50px;
+  overflow: hidden;
+
+  background-color: white;
+}
+.pricing-table-header {
+  padding: 1rem 1.2rem;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.style-1 .pricing-table-header {
+  background-color: purple;
+}
+.style-2 .pricing-table-header {
+  background-color: pink;
+}
+.style-3 .pricing-table-header {
+  background-color: yellow;
+}
+.pricing-table-price {
+  display: flex;
+
+  padding: 1rem;
+}
+/*change color text when toggle button*/
+.text-monthly,
+.text-yearly {
+  transition: color 0.5s ease;
+}
+.pricing-main:not(.active) .text-monthly,
+.pricing-main.active .text-yearly {
+  color: blue;
+}
+/*change price when toggle*/
+
+.yearly-price,
+.monthly-price {
+  color: rgb(71, 66, 66);
+  flex-shrink: 0;
+  width: 100%;
+
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+
+  transition: all 0.5s ease;
+}
+.pricing-main.active .yearly-price,
+.pricing-main.active .monthly-price {
+  transform: translateX(-100%);
+}
+/*end*/
+
+/*yearly ffeatured*/
+.monthly-featured,
+.yearly-featured {
+  display: none;
+}
+.pricing-main:not(.active) .monthly-featured,
+.pricing-main.active .yearly-featured {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pricing-table-price .currency {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.pricing-table-price .amount {
+  font-size: 3rem;
+  font-weight: 800;
+
+  line-height: 0.8;
+}
+.pricing-table-body {
+  padding: 2rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: grey;
+}
+.pricing-table-body ul li {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.pricing-table-body ul li i {
+  display: flex;
+  background-color: #bbbbbb;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.4rem;
+}
+.pricing-table-body ul li i.fa-check {
+  background-color: green;
+  color: White;
+}
+.pricing-table-body ul li i.fa-close {
+  background-color: red;
+  color: white;
+}
+.pricing-table-footer a {
+  padding: 1rem;
+  background-color: rgb(52, 55, 56);
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: box-shadow 0.3s ease;
+}
+.pricing-table-footer a:hover {
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.6);
+}
+.pricing-table-footer {
+  margin: 2rem 0;
+  text-align: center;
+}
+/*team*/
+
+.team {
+  padding: 2rem;
+}
+
+.team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team-item {
+  margin: 1.5rem 0;
+}
+.team-item:hover {
+  background-color: yellow;
+  border-bottom: 1px solid lightgrey;
+}
+.team-item-content {
+  text-align: center;
+}
+
+.contact {
+  background-color: lightgrey;
+  padding: 2rem;
+}
+.contact.title-text {
+  font-size: 0.5rem;
+}
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-info-item {
+  text-align: center;
+  margin: 2rem;
+}
+.contact-form {
+  margin: 3rem 0;
+}
+.form-control,
+textarea {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.9rem 0.6rem;
+  margin: 0.8rem;
+}
+.contact-form textarea {
+  height: 180px;
+}
+.submit-btn {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  border-width: 2.5px;
+  transition: all 0.5s ease;
+}
+.submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.footer-bg {
+  height: 300px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(./images/footer.jpeg) center/cover no-repeat;
+}
+.footer-icons {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0.7rem;
+  font-size: 1rem;
+}
+.footer-icon-item:hover {
+  background-color: yellow;
+}
+.footer-text {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .about-wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    padding: 0.3rem;
+  }
+  .contact-form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  textarea {
+    height: 180px;
+  }
+  .submit-btn {
+    width: 400px;
+
+    margin: auto;
+  }
+}
